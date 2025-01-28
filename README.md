@@ -2,16 +2,18 @@
 
 This repo contains code and reproduction steps for a bug with ansible-compat 25.1.0 in VS Code using the Ansible plugin.
 
+Intended to be used as a minimal test case for this issue in the ansible-compat repo: https://github.com/ansible/ansible-compat/issues/454
+
 ### Run playbook
 
-To run the playbook, cd into the root of this project (same level as `.vscode`) and run `ansible-playbook --inventory ansible/inventory.ini ansible/test_playbook.yaml
+To run the playbook, cd into the root of this project (same level as `.vscode`) and run `ansible-playbook --inventory ansible/inventory.ini ansible/test_playbook.yaml`
 
 ### Reproduce `ansible-compat` 25.1.0 VS Code problem
 
 1. Install VS Code 1.96.4
 2. Open `.vscode/ansible-compat-lint-vscode-bug.code-workspace`
 3. Install the workspace recommended Ansible plugin (version `v25.1.0`)
-4. Open the `ansible/test_playbook.yaml` and an error message should popup
+4. Open the `ansible/test_playbook.yaml` file and an error message should popup
 5. Install `ansible-compat` 24.10.0, follow steps 1-4, error message doesn't pop up and the file should find the following lint error:
 
 
